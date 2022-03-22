@@ -15,126 +15,79 @@
     <div class="form">
       <form id="form1">
         <fieldset id="field1">
-          <h3>Let us begin!</h3>
-          <div class="btn-box">
-            <button type="button" id="start">Start Here</button>
-          </div>
-          </fieldset>
-        <fieldset id="field2">
-          <h3>Where are you travelling?</h3>
-          <div class="btn-box">
-            <button type="button" id="where1">From University</button>
-            <button type="button" id="where2">To University</button>
-          </div>
-        </fieldset>
-        <fieldset id="field3">
-          <h3>Enter your current location</h3>
+          <h3>Enter your Name</h3>
           <input type="text" placeholder="Location">
-          <div class="btn-box">
-            <button type="button" onclick="next()">Next</button>
-          </div>
-        </fieldset>
-        <fieldset id="field4">
-          <h3>Enter your desired location</h3>
-          <input type="text" placeholder="Location">
-          <div class="btn-box">
-            <button type="button" onclick="next()">Next</button>
-          </div>
-        </fieldset>
-        <fieldset id="field5">
-          <h3>Are you offering a ride?</h3>
-          <div class="btn-box">
-            <button type="button" id="yes">Yes</button>
-            <button type="button" id="no">No</button>
-          </div>
-        </fieldset>
-        <fieldset id="field6">
-          <h3>How many passengers can you accomodate?</h3>
-          <div class="slider">
-            <input type="range" min="1" max="5" value="1" class="rangeslider" id="slider">
-          </div>
-          <label id="label" class="label-right">5</label>
           <div class="btn-box">
             <button type="button" onclick="next1()">Next</button>
           </div>
         </fieldset>
-        <fieldset id="field7">
-          <h3>How many passengers are there with you?</h3>
-          <div class="slider">
-            <input type="range" min="1" max="5" value="1" class="rangeslider" id="slider">
-          </div>
-          <label id="label" class="label-right">5</label>
-          <div class="btn-box">
-            <button type="button">Search rides</button>
-          </div>
-        </fieldset>
-        <fieldset id="field8">
-          <h3>Enter vehicle name</h3>
-          <input type="text" placeholder="car name">
+        <fieldset id="field2">
+          <h3>Enter your Phone Number</h3>
+          <input type="text" placeholder="Phone Number">
           <div class="btn-box">
             <button type="button" onclick="next2()">Next</button>
           </div>
         </fieldset>
-        <fieldset id="field9">
-          <h3>Enter vehicle number</h3>
-          <input type="text" placeholder="vehicle number">
+        <fieldset id="field3">
+          <h3>Enter your Sushant University e-mail id</h3>
+          <input type="email" placeholder="Email id">
           <div class="btn-box">
-            <button type="button">Search rides</button>
+            <button type="button" onclick="next3()">Next</button>
+          </div>
+        </fieldset>
+        <fieldset id="field4">
+          <h3>Enter your age</h3>
+          <input type="text" placeholder="Age">
+          <div class="btn-box">
+            <button type="button" onclick="next4()">Next</button>
+          </div>
+        </fieldset>
+        <fieldset id="field5">
+          <h3>Enter your gender</h3>
+          <ul>
+            <li><input type="radio" name="sex">Male</li>
+            <li><input type="radio" name="sex">Female</li>
+            <li><input type="radio" name="sex">Other</li>
+          </ul>
+          <div class="btn-box">
+            <button type="button" onclick="next5()">Next</button>
+          </div>
+        </fieldset>
+        <fieldset id="field6">
+          <h3>Enter password</h3>
+          <input type="text" placeholder="Password">
+          <div class="btn-box">
+            <a href="info.html"><button type="button">Submit</button></a>
           </div>
         </fieldset>
       </div>
     </form>
     </div>
     <script>
-      var start = document.getElementById('start')
-      var wherefrom = document.getElementById('where1')
-      var whereto = document.getElementById('where2')
-      var yes = document.getElementById('yes')
-      var no = document.getElementById('no')
-
-      start.onclick = function()
+      function next1()
       {
         field1.style.left = "-450px";
         field2.style.left = "5px";
       }
-      wherefrom.onclick = function()
-      {
-        field2.style.left = "-450px";
-        field4.style.left = "5px";
-      }
-      whereto.onclick = function()
+      function next2()
       {
         field2.style.left = "-450px";
         field3.style.left = "5px";
       }
-      function next()
+      function next3()
       {
         field3.style.left = "-450px";
+        field4.style.left = "5px";
+      }
+      function next4()
+      {
         field4.style.left = "-450px";
         field5.style.left = "5px";
       }
-      yes.onclick = function()
+      function next5()
       {
         field5.style.left = "-450px";
         field6.style.left = "5px";
-      }
-      no.onclick = function()
-      {
-        field5.style.left = "-450px";
-        field6.style.left = "-450px";
-        field7.style.left = "5px";
-      }
-      function next1()
-      {
-        field6.style.left = "-450px";
-        field7.style.left = "-450px";
-        field8.style.left = "5px";
-      }
-      function next2()
-      {
-        // field7.style.left = "-450px";
-        field8.style.left = "-450px";
-        field9.style.left = "5px";
       }
       var slider = document.querySelector('#slider')
       var label = document.querySelector('#label')
